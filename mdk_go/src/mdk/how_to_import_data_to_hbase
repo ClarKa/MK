@@ -1,0 +1,10 @@
+## There is a volume called database in volume console. The database file is under a folder also called database
+sudo mkdir /mnt/ebs1
+sudo mount /dev/xvdf/ /mnt/ebs1
+cd /mnt/ebsq/database
+hadoop fs -mkdir /tw
+hadoop fs -put database /tw
+hbase shell
+create 'tw',{NAME => 'data'}
+hbase org.apache.hadoop.hbase.mapreduce.ImportTsv -Dimporttsv.bulk.output=output1 -Dimporttsv.columns=HBASE_ROW_KEY,data:user_id,data:created_at,data:text,data:censored_text,data:score,data:impact,data:hashtags tw /tw
+hbase org.apache.hadoop.hbase.mapreduce.LoadIncrementalHFiles output1 tw
