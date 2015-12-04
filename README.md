@@ -1,12 +1,6 @@
 # mdk
 Cloud Computing 15619 - Twitter Analytics Web Service
 
-There are 2 branches. Code for mysql is on master/ Code for HBase is on hbase 
-
-##NEVER MERGE THEM
-
-use checkout command to switch branch.
-
 ## mdk_go
 1. Install git on ubuntu
 2. Clone this project
