@@ -1,5 +1,5 @@
 # mdk
-Cloud Computing 15619 - Twitter Analytics Web Service
+Cloud Computing - Twitter Analytics Web Service
 
 ## mdk_go
 1. Install git on ubuntu
